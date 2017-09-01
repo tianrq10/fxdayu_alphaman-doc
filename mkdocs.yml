@@ -1,0 +1,19 @@
+site_name: fxdayu_alphaman 1.0 文档
+pages:
+    - 主页: index.md
+    - API文档:
+        - factor package:
+            - factor: factor-factor.md
+            - admin: factor-admin.md
+            - utility: factor-utility.md
+        - selector package:
+            - selector: selector-selector.md
+            - admin: selector-admin.md
+            - selector_analysis: selector-selector_analysis.md
+            - utility: selector-utility.md
+    - 案例:
+        - 多因子滚动加权组合: case_1/case_1.md
+        - 对因子算法做参数优化: case_2/case_2.md
+        - 设计、优化、评估信号选股方案: case_3/case_3.md
+        - 股票多策略实现: case_4/case_4.md
+theme: readthedocs

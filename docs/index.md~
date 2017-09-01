@@ -1,0 +1,18 @@
+# fxdayu_alphaman 1.0 文档
+
+标签（空格分隔）： 选股因子设计 优化 多因子组合 合并选股方案
+---
+
+## Commands
+
+* `mkdocs new [dir-name]` - Create a new project.
+* `mkdocs serve` - Start the live-reloading docs server.
+* `mkdocs build` - Build the documentation site.
+* `mkdocs help` - Print this help message.
+
+## Project layout
+
+    mkdocs.yml    # The configuration file.
+    docs/
+        index.md  # The documentation homepage.
+        ...       # Other markdown pages, images and other files.

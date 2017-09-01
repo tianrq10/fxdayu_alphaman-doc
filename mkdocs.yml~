@@ -1,0 +1,9 @@
+site_name: fxdayu_alphaman
+pages:
+    - 主页:'index.md'
+    - 介绍:
+        - 关于1: about.md
+    - 关于:
+        - 关于1: about.md
+        - 关于2: about2.md
+theme: readthedocs
