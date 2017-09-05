@@ -16,7 +16,7 @@ fxdayu_alphaman 下有factor、selector两个子包。
 
 # 技术支持
 
-
+- [GitHub](https://github.com/xingetouzi/fxdayu_alphaman)
 - [文档](http://fxdayu-alphaman-document.readthedocs.io/zh_CN/latest/)
-- [访问我们的大鱼学院获得更多的金融量化知识](http://www.fxdayu.com/tutorials.html)
+- [访问大鱼学院获得更多的金融量化知识](http://www.fxdayu.com/tutorials.html)
 - 加qq群(372592121)进行讨论
