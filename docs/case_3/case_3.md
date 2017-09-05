@@ -36,7 +36,7 @@ class DayMA(Selector):
     fast = 5
     slow = 10
 
-    def calculate_MA_signal(self, data):
+    def calculate_signal_by_column(self, data):
         candle_data = data[1].dropna()
         if len(candle_data) == 0:
             return
@@ -51,7 +51,7 @@ class DayMA(Selector):
         return choice
 
     def execute(self, pool, start, end, data=None, data_config=None):
-        selector_result = map(self.calculate_MA_signal, data.iteritems())
+        selector_result = map(self.calculate_signal_by_column, data.iteritems())
         selector_result = pd.concat(selector_result, axis=1).stack()
         selector_result.index.names = ["date","asset"]
         return selector_result.loc[start:end]

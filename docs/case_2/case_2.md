@@ -31,7 +31,7 @@ class Factor_Volume001(Factor):
 
     c = 3
 
-    def calculate_volume001(self, data):
+    def calculate_factor_by_column(self, data):
         # 逐支股票计算volume001因子
         candle_data = data[1].dropna()
         if len(candle_data) == 0:
@@ -39,20 +39,20 @@ class Factor_Volume001(Factor):
         high = candle_data["high"]
         volume = candle_data["volume"]
         adv_s = self.ts_mean(volume, 10)
-        factor_volume001 = - self.correlation(high, adv_s, self.c) #计算因子值
-        factor_volume001.index = candle_data.index
-        factor_volume001 = pd.DataFrame(factor_volume001)
-        factor_volume001.columns = [data[0],]
-        return  factor_volume001
+        result = - self.correlation(high, adv_s, self.c) #计算因子值
+        result.index = candle_data.index
+        result = pd.DataFrame(result)
+        result.columns = [data[0],]
+        return  result
 
     def factor_calculator(self, pn_data):
         # volume001
-        factor_volume001 = map(self.calculate_volume001, pn_data.iteritems())
-        factor_volume001 = pd.concat(factor_volume001, axis=1)
-        factor_volume001 = self.winsorize(factor_volume001) #去极值
-        factor_volume001 = self.standardize(factor_volume001) #标准化
-        factor_volume001 = self.factor_df_to_factor_mi(factor_volume001) #转化成MuitiIndex格式(相当与stack()方法)
-        return factor_volume001
+        factor = map(self.calculate_factor_by_column, pn_data.iteritems())
+        factor = pd.concat(factor, axis=1)
+        factor = self.winsorize(factor) #去极值
+        factor = self.standardize(factor) #标准化
+        factor = self.factor_df_to_factor_mi(factor) #转化成MuitiIndex格式(相当与stack()方法)
+        return factor
 ```
 
 ## Step_2： 股票池与数据读取
