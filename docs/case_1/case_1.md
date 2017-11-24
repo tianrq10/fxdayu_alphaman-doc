@@ -234,7 +234,7 @@ prices.head()
 
 
 ```python
-from fxdayu_alphaman.factor.factor import Factor
+from fxdayu_alphaman.factor import Factor
 from matplotlib import pyplot as plt
 f=Factor()
 

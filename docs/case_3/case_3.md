@@ -28,7 +28,7 @@ Step_7： 最优绩效结果可视化与保存Excel
 # encoding:utf-8
 import pandas as pd
 from talib.abstract import MA
-from fxdayu_alphaman.selector.selector import Selector
+from fxdayu_alphaman.selector import Selector
 
 class DayMA(Selector):
 
@@ -84,7 +84,7 @@ PN = DataAPI.candle(codes, 'D', start=start, end=end, adjust="after")
 
 
 ```python
-from fxdayu_alphaman.selector.admin import Admin
+from fxdayu_alphaman.selector import Admin
 
 selector = DayMA()
 s_admin = Admin()

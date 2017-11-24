@@ -25,7 +25,7 @@ Step_6： 最优绩效结果可视化与保存Excel
 ```python
 # -*- coding: utf-8 -*-
 import pandas as pd
-from fxdayu_alphaman.factor.factor import Factor
+from fxdayu_alphaman.factor import Factor
 
 class Factor_Volume001(Factor):
 
